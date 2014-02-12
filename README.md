@@ -3,7 +3,7 @@ Standalone HTML with Slidify
 
 This repo is a demo showcasing my attempts to allow standalone HTMLs to be created using Slidify. The modifications I have made to Slidify to support this feature reside in the `onefile` branch and so you will need to install it first.
 
-```
+```S
 devtools:::install_github('ramnathv/slidify@onefile')
 ```
 
