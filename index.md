@@ -9,7 +9,7 @@ hitheme: solarized_light
 ext_widgets: {rCharts: libraries/nvd3}
 ---
 
-## Note
+## Introduction
 
 This is a short demo of proof-of-concept of creating completely standalone HTML file using slidify with embedded rCharts. To help me test it, please do the following
 
@@ -22,6 +22,8 @@ Everything except fonts should work, since they have been embedded as data-URIs.
 
 ---
 
+## Chart
+
 
 ```r
 library(rCharts)
@@ -30,21 +32,20 @@ n1$show("inline")
 ```
 
 
-<div id = 'charte7e06df2ef4f' class = 'rChart nvd3'></div>
+<div id = 'chart544815e054c1' class = 'rChart nvd3'></div>
 <script type='text/javascript'>
  $(document).ready(function(){
-      drawcharte7e06df2ef4f()
+      drawchart544815e054c1()
     });
-    function drawcharte7e06df2ef4f(){  
+    function drawchart544815e054c1(){  
       var opts = {
- "dom": "charte7e06df2ef4f",
+ "dom": "chart544815e054c1",
 "width":    800,
 "height":    400,
-"process_data": true,
 "x": "wt",
 "y": "mpg",
 "type": "scatterChart",
-"id": "charte7e06df2ef4f" 
+"id": "chart544815e054c1" 
 },
         data = [
  {
@@ -465,7 +466,7 @@ n1$show("inline")
 } 
 ]
   
-      if(!(opts.type==="pieChart" || opts.type==="sparklinePlus" || opts.type==="bulletChart")) {
+      if(!(opts.type==="pieChart" || opts.type==="sparklinePlus")) {
         var data = d3.nest()
           .key(function(d){
             //return opts.group === undefined ? 'main' : d[opts.group]
@@ -483,15 +484,10 @@ n1$show("inline")
       
       nv.addGraph(function() {
         var chart = nv.models[opts.type]()
+          .x(function(d) { return d[opts.x] })
+          .y(function(d) { return d[opts.y] })
           .width(opts.width)
           .height(opts.height)
-          
-        if (opts.type != "bulletChart"){
-          chart
-            .x(function(d) { return d[opts.x] })
-            .y(function(d) { return d[opts.y] })
-        }
-          
          
         
           
