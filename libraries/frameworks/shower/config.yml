@@ -1,0 +1,4 @@
+shower:
+  theme: ribbon
+  css: "themes/ribbon/styles/screen.css"
+  js: "shower.min.js"

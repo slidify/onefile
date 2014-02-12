@@ -1,0 +1,5 @@
+io2012:
+  theme: NULL
+  js: ['js/slide_config.js','js/modernizr.custom.45394.js', 'js/hammer.js', 'js/slide-controller.js', 'js/slide-deck.js']
+  css: [css/default.css, css/slidify.css]
+layout: default

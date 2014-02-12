@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	{{> head }}  
+   {{{ page.assets.css }}}
+   {{{ page.assets.jshead }}}
+	<!--
+		To apply styles to the certain slides
+		use slide ID to get needed elements
+		-->
+	<style>
+		#Cover h2 {
+      margin:65px 0 0;
+			color:#FFF;
+			text-align:center;
+			font-size:70px;
+			}
+		#FitToWidth h2,
+		#FitToHeight h2 {
+			color:#FFF;
+			text-align:center;
+			}
+	</style> 
+</head>
+<body class="list">
+  <header class="caption">
+  	<h1>{{{ page.title }}}</h1>
+	</header>
+  {{{ page.content }}}
+  <div class="progress">
+    <div></div>
+  </div>
+  {{{ page.assets.js }}}
+  <script>
+    {{{ page.assets.ready }}}
+  </script>
+</body>
+</html>

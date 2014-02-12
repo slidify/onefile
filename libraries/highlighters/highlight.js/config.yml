@@ -1,0 +1,4 @@
+highlightjs:
+  css: "css/solarized_light.css"
+  js: "highlight.pack.js"
+  ready: "hljs.initHighlightingOnLoad()"

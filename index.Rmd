@@ -1,0 +1,49 @@
+---
+title: Standalone HTML
+subtitle: Slidify and rCharts
+framework: io2012
+widgets: [quiz, bootstrap]
+mode: selfcontained
+onefile: True
+hitheme: solarized_light
+ext_widgets: {rCharts: libraries/nvd3}
+---
+
+## Introduction
+
+This is a short demo of proof-of-concept of creating completely standalone HTML file using slidify with embedded rCharts. To help me test it, please do the following
+
+1. Download the source of this page and save as HTML
+2. Turn of wi-fi 
+3. Refresh your browser page to make sure that there is no caching
+4. Check to see if the presentation still works. 
+
+Everything except fonts should work, since they have been embedded as data-URIs.
+
+---
+
+## Chart
+
+```{r results = 'asis', comment = NA}
+library(rCharts)
+n1 <- nPlot(mpg ~ wt, data = mtcars, type = 'scatterChart')
+n1$show('inline')
+```
+
+--- &radio
+
+## Quiz
+
+This is a quiz question
+
+1. A
+2. B
+3. _C_
+4. D
+
+*** .hint
+
+This is a hint
+
+
+
